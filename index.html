@@ -33,19 +33,29 @@
                     <div class="name">
                         <label for="name">name:</label>
                         <input type="text" id="inputFirstName" required>
+                        <div class="validationName validation">
+                            <p>
+                                u can't enter number
+                            </p>
+                        </div>
                    
                     </div>
 
                     <div class="lName">
                         <label for="lastName">last name:</label>
                         <input type="text" id="inputLastName" required>
+                        <div class="validationLastName validation">
+                            <p>
+                                u can't enter number
+                            </p>
+                        </div>
                      
                     </div>
 
                     <div class="pass">
                         <label for="pass">password:</label>
                         <input type="password" id="inputPass" required>
-                        <div class="validation">
+                        <div class="validation validationPass" >
                             <p>
                                 last password should not be less than 5 character
                             </p>
@@ -55,6 +65,11 @@
                     <div class="userName">
                         <label for="userName">user name:</label>
                         <input type="text" id="inputUserName" required>
+                        <div class="validation">
+                            <p>
+                                user name should not be less than 5 character
+                            </p>
+                        </div>
                  
                         
                     </div>
@@ -62,7 +77,13 @@
                     <div class="email">
                         <label for="email">email:</label>
                         <input type="email" id="inputEmail" required>
+                        <div class="validation validationEmail">
+                            <p>
+                                email should end with @email.com
+                            </p>
+                        </div>
                
+
                     </div>
 
                     <div class="btn">
@@ -74,11 +95,112 @@
 
                 </form>
 
-                   <div class="loc btn">
-                        <button type="button">
-                            <a href="./location/index.html" target="_blank"> get location</a>
-                        </button>
+
+            </main>
+         </div>
+    </div>
+
+
+    <script src="./script/script.js"></script>
+    
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>task</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="header">
+            <header>
+                <div class="header-content">
+                    <h1>
+                        login task
+                    </h1>
+                </div>
+            </header>
+        </div>
+        <!-- header end -->
+
+        <!-- login start -->
+         <div class="content">
+            <main>
+                <form class="form">
+                    <div class="form-header">
+                        <h2>
+                            log in
+                        </h2>
                     </div>
+
+                    <div class="name">
+                        <label for="name">name:</label>
+                        <input type="text" id="inputFirstName" required>
+                        <div class="validationName validation">
+                            <p>
+                                u can't enter number
+                            </p>
+                        </div>
+                   
+                    </div>
+
+                    <div class="lName">
+                        <label for="lastName">last name:</label>
+                        <input type="text" id="inputLastName" required>
+                        <div class="validationLastName validation">
+                            <p>
+                                u can't enter number
+                            </p>
+                        </div>
+                     
+                    </div>
+
+                    <div class="pass">
+                        <label for="pass">password:</label>
+                        <input type="password" id="inputPass" required>
+                        <div class="validation validationPass" >
+                            <p>
+                                last password should not be less than 5 character
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="userName">
+                        <label for="userName">user name:</label>
+                        <input type="text" id="inputUserName" required>
+                        <div class="validation">
+                            <p>
+                                user name should not be less than 5 character
+                            </p>
+                        </div>
+                 
+                        
+                    </div>
+
+                    <div class="email">
+                        <label for="email">email:</label>
+                        <input type="email" id="inputEmail" required>
+                        <div class="validation validationEmail">
+                            <p>
+                                email should end with @email.com
+                            </p>
+                        </div>
+               
+
+                    </div>
+
+                    <div class="btn">
+                        <button type="submit" id="btn">
+                            submit
+                        </button>
+                    </div>  
+                    
+
+                </form>
+
 
             </main>
          </div>

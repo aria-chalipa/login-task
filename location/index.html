@@ -1,43 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>location</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Mapbox Neshan Map</title>
+
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="https://static.neshan.org/sdk/mapboxgl/v1.13.2/neshan-sdk/v1.1.1/index.css" />
+    <script src="https://static.neshan.org/sdk/mapboxgl/v1.13.2/neshan-sdk/v1.1.1/index.js"></script>
+
     <style>
-        .location{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.474);
-            padding: 10px;
-        
-            
+        body {
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+        }
+
+        #map {
+            height: 80%;
+            width: 90%;
+            margin: 0 5%;
+            border-radius: 10px;
         }
     </style>
-
 </head>
 <body>
-
-    <div class="main">
-        <div class="header">
-            <header>
-                <div class="header-content">
-                    <h1>
-                        login task / location
-                    </h1>
-                </div>
-            </header>
-        </div>
-        <div class="location">
-            <div id="map" style="width: 600px; height: 400px;"></div>
-        </div>
+    <div class="header">
+        <header>
+            <div class="header-content">
+                <h1>
+                    login task
+                </h1>
+               
+            </div>
+        </header>
     </div>
-
-    <script src="./script.js"></script>
+    <!-- header end -->
     
+    <div id="map"></div>
+
+<script src="./script.js"></script>
 </body>
 </html>
