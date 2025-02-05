@@ -103,11 +103,3 @@ pass.addEventListener('input', (e) => validateInput(e, validPass))
 email.addEventListener('input', (e) => validateInput(e, validEmail))
 userName.addEventListener('input', (e) => validateInput(e, validUserName))
 document.getElementById('btn').addEventListener('click', submit)
-
-// Redirect if user is already logged in
-if (window.location.pathname.includes('index.html')) {
-    const existingUser = localStorage.getItem('userData');
-    if (existingUser) {
-        window.location.href = './location/index.html';
-    }
-}

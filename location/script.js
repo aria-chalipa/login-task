@@ -26,18 +26,29 @@ neshanMap.addControl(new nmp_mapboxgl.GeolocateControl({
  
 }));
 
+
+let currentMarker;
+
 neshanMap.on('click', function(e) {
-    console.log(e.lngLat);
-    const marker = new nmp_mapboxgl.Marker({
+    
+    
+    
+    if (currentMarker) {
+        currentMarker.remove();
+    }
+    currentMarker = new nmp_mapboxgl.Marker({
         color: 'blue',
         draggable: true,
         anchor: 'bottom'
     }).setLngLat([e.lngLat.lng , e.lngLat.lat]).addTo(neshanMap);
+
+    
 });
 
+// map end
 
-
-function logout() {
-    localStorage.removeItem('userData');
-    window.location.href = '../index.html';
-}
+document.querySelector('.logout-button').addEventListener('click', function() {
+    const lngLat = currentMarker.getLngLat();
+    localStorage.setItem('lngLat', JSON.stringify(lngLat));
+    window.location.href = '../loading/index.html';
+});
