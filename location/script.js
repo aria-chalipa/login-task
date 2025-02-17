@@ -50,5 +50,5 @@ neshanMap.on('click', function(e) {
 document.querySelector('.logout-button').addEventListener('click', function() {
     const lngLat = currentMarker.getLngLat();
     localStorage.setItem('lngLat', JSON.stringify(lngLat));
-    window.location.href = '../loading/index.html';
+    window.location.href = '../content/index.html';
 });

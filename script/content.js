@@ -1,12 +1,12 @@
+ let loading = true
 document.addEventListener('DOMContentLoaded', () => {
-
-    fetch('https://fakestoreapi.com/products')
+   
+    displayLoading()
+   setInterval(() => fetch('https://fakestoreapi.com/products')
         .then(res => {
-            console.log( res);
-            if (!res.ok) {
-                throw new Error('Network response was not ok');
-            }
+            loading = false
             return res.json();
+            
         })
         .then(products => {
             console.log( products);
@@ -20,8 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
                     <small>${error.message}</small>
                 </div>
             `;
-        });
+        }),3000)
 });
+
+function displayLoading(){
+    if(loading){
+        const container = document.getElementById('productContainer');
+        container.innerHTML =''
+        const loadingShow = `
+         <div class="loader">
+                <div class="loading-text">Loading...</div>
+            </div>
+
+            <div class="text">
+                <h3>
+                    loading...
+                </h3>
+        </div>`
+        container.innerHTML += loadingShow       
+    }
+}
 
 function displayProducts(products) {
     const container = document.getElementById('productContainer');
